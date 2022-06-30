@@ -1,6 +1,9 @@
 package Ik.ijse.hybernate.util;
 
 import Ik.ijse.hybernate.entity.Reservation;
+import Ik.ijse.hybernate.entity.Room;
+import Ik.ijse.hybernate.entity.Student;
+import Ik.ijse.hybernate.entity.UserLogin;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
