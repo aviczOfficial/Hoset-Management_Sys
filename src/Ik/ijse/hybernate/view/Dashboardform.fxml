@@ -50,7 +50,7 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutY="381.0" onAction="#btnResevation" prefHeight="65.0" prefWidth="270.0" styleClass="button5" stylesheets="@../css/fullpackstyling.css" text="RESERVATION" textFill="WHITE">
+      <JFXButton layoutY="386.0" onAction="#btnResevation" prefHeight="65.0" prefWidth="270.0" styleClass="button5" stylesheets="@../css/fullpackstyling.css" text="RESERVATION" textFill="WHITE">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
@@ -61,7 +61,7 @@
          </font>
       </JFXButton>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#510a32" height="41.0" layoutX="376.0" stroke="TRANSPARENT" strokeType="INSIDE" width="200.0" />
-      <Label layoutX="454.0" layoutY="11.0" text="DATE" textAlignment="CENTER" textFill="#ee4540">
+      <Label fx:id="lblDate" layoutX="454.0" layoutY="11.0" text="DATE" textAlignment="CENTER" textFill="#ee4540">
          <font>
             <Font name="Aachen-Bold" size="15.0" />
          </font>
@@ -72,7 +72,7 @@
             <Image url="@../asserts/pnghut_light-gradient-refraction-purple.png" />
          </image>
       </ImageView>
-      <Label layoutX="747.0" layoutY="11.0" text="TIME" textAlignment="CENTER" textFill="#ee4540">
+      <Label fx:id="lblTime" layoutX="747.0" layoutY="11.0" text="TIME" textAlignment="CENTER" textFill="#ee4540">
          <font>
             <Font name="Aachen-Bold" size="15.0" />
          </font>

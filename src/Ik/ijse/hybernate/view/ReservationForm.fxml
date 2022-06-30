@@ -14,83 +14,73 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="PaneResevation" prefHeight="680.0" prefWidth="1264.0" style="-fx-background-color: #510a32;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ik.ijse.hybernate.controller.ReservationFormController">
+<AnchorPane fx:id="PaneResevation" prefHeight="686.0" prefWidth="1264.0" style="-fx-background-color: #510a32;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ik.ijse.hybernate.controller.ReservationFormController">
    <children>
-      <TableView layoutX="353.0" layoutY="131.0" prefHeight="528.0" prefWidth="894.0" stylesheets="@../css/fullpackstyling.css">
+      <TableView fx:id="tblReservation" layoutX="353.0" layoutY="131.0" prefHeight="528.0" prefWidth="894.0" stylesheets="@../css/fullpackstyling.css">
         <columns>
-          <TableColumn prefWidth="118.0" text="Reservation ID" />
-          <TableColumn prefWidth="122.0" text="Room ID" />
-            <TableColumn prefWidth="164.0" text="Room Type" />
-            <TableColumn prefWidth="127.0" text="Qty" />
-            <TableColumn prefWidth="140.0" text="Key Money" />
-            <TableColumn prefWidth="111.0" text="Status" />
-            <TableColumn prefWidth="111.0" text="Delete" />
+          <TableColumn fx:id="colReservationID" prefWidth="118.0" text="Reservation ID" />
+          <TableColumn fx:id="colRoomId" prefWidth="122.0" text="Room ID" />
+            <TableColumn fx:id="colRoomType" prefWidth="164.0" text="Room Type" />
+            <TableColumn fx:id="colStudentQty" prefWidth="127.0" text="Qty" />
+            <TableColumn fx:id="colKeyMny" prefWidth="140.0" text="Key Money" />
+            <TableColumn fx:id="colStatus" prefWidth="111.0" text="Status" />
+            <TableColumn fx:id="colDelete" prefWidth="111.0" text="Delete" />
         </columns>
          <styleClass>
             <String fx:value="table-view" />
             <String fx:value="table-row-cell" />
          </styleClass>
       </TableView>
-      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="217.0" prefHeight="19.0" prefWidth="248.0" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" text="Student Name" unFocusColor="#801336">
+      <JFXTextField fx:id="txtStudentName" focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="217.0" prefHeight="19.0" prefWidth="248.0" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" text="Student Name" unFocusColor="#801336">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></JFXTextField>
-      <JFXButton buttonType="RAISED" layoutX="63.0" layoutY="592.0" prefHeight="38.0" prefWidth="111.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="Save">
+      <JFXButton buttonType="RAISED" layoutX="63.0" layoutY="628.0" onAction="#btnReserve" prefHeight="38.0" prefWidth="111.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="Reserve">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="197.0" layoutY="592.0" prefHeight="38.0" prefWidth="111.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="Delete">
+      <JFXButton buttonType="RAISED" layoutX="197.0" layoutY="628.0" onAction="#btnUpdate" prefHeight="38.0" prefWidth="111.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="Update">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </JFXButton>
-      <Label layoutX="76.0" layoutY="42.0" text="RESERVATION" textFill="WHITE">
+      <Label layoutX="52.0" layoutY="51.0" text="RESERVATION" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Separator layoutX="76.0" layoutY="74.0" prefHeight="2.0" prefWidth="176.0" />
-      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="452.0" prefHeight="19.0" prefWidth="248.0" promptText="Qty" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
+      <Separator layoutX="52.0" layoutY="103.0" prefHeight="7.0" prefWidth="244.0" />
+      <JFXTextField fx:id="txtRoomQty" focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="452.0" prefHeight="19.0" prefWidth="248.0" promptText="Qty" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="335.0" prefHeight="19.0" prefWidth="248.0" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" text="Room Type" unFocusColor="#801336">
+      <JFXTextField fx:id="txtRoomType" focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="335.0" prefHeight="19.0" prefWidth="248.0" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" text="Room Type" unFocusColor="#801336">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="395.0" prefHeight="19.0" prefWidth="248.0" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" text="Key Money" unFocusColor="#801336">
+      <JFXTextField fx:id="txtKeyMoney" focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="395.0" prefHeight="19.0" prefWidth="248.0" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" text="Key Money" unFocusColor="#801336">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField alignment="CENTER" focusColor="#ee4540" labelFloat="true" layoutX="353.0" layoutY="59.0" prefHeight="33.0" prefWidth="415.0" promptText="Search" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </JFXTextField>
-      <ImageView layoutX="353.0" layoutY="64.0">
-         <image>
-            <Image url="@../asserts/icons8-search-24.png" />
-         </image>
-      </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="33.0" layoutX="63.0" layoutY="163.0" stroke="#ee4045" strokeType="INSIDE" width="248.0" />
-      <JFXComboBox focusColor="#ee4045" layoutX="63.0" layoutY="163.0" prefHeight="33.0" prefWidth="248.0" promptText="Student ID" unFocusColor="WHITE" />
+      <JFXComboBox fx:id="cmbStudentID" focusColor="#ee4045" layoutX="63.0" layoutY="163.0" prefHeight="33.0" prefWidth="248.0" promptText="Student ID" unFocusColor="WHITE" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="33.0" layoutX="63.0" layoutY="274.0" stroke="#ee4045" strokeType="INSIDE" width="248.0" />
-      <JFXComboBox focusColor="#ee4045" layoutX="63.0" layoutY="274.0" prefHeight="33.0" prefWidth="248.0" promptText="Room ID" unFocusColor="WHITE" />
-      <JFXButton buttonType="RAISED" layoutX="63.0" layoutY="528.0" prefHeight="38.0" prefWidth="248.0" styleClass="buttonAdd" stylesheets="@../css/fullpackstyling.css" text="Add to Remain Key-Money">
+      <JFXComboBox fx:id="cmbRoomID" focusColor="#ee4045" layoutX="63.0" layoutY="274.0" prefHeight="33.0" prefWidth="248.0" promptText="Room ID" unFocusColor="WHITE" />
+      <JFXButton fx:id="btnAddToRemain" buttonType="RAISED" layoutX="63.0" layoutY="568.0" onAction="#btnAddToRemain" prefHeight="38.0" prefWidth="248.0" styleClass="buttonAdd" stylesheets="@../css/fullpackstyling.css" text="Add to Remain Key-Money">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </JFXButton>
-      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="786.0" layoutY="58.0" prefHeight="33.0" prefWidth="153.0" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" text="Status" unFocusColor="#801336">
+      <JFXTextField fx:id="txtStatus" focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="502.0" prefHeight="33.0" prefWidth="111.0" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" text="Status" unFocusColor="#801336">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="955.0" layoutY="58.0" prefHeight="33.0" prefWidth="153.0" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" text="QTY" unFocusColor="#801336">
+      <JFXTextField fx:id="txtStudentQty" focusColor="#ee4540" labelFloat="true" layoutX="197.0" layoutY="502.0" prefHeight="33.0" prefWidth="111.0" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" text="QTY" unFocusColor="#801336">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -101,5 +91,30 @@
             <Image url="@../asserts/pngegg%20(6).png" />
          </image>
       </ImageView>
+      <Label layoutX="353.0" layoutY="42.0" text="Room Availability" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRoomId" layoutX="608.0" layoutY="42.0" text="RM-1324" textFill="#ee4540">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRoomType" layoutX="768.0" layoutY="42.0" text="AC" textFill="#ee4540">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRoomQty" layoutX="852.0" layoutY="42.0" text="QTY" textFill="#ee4540">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblReserveID" layoutX="1117.0" layoutY="25.0" text="R001" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

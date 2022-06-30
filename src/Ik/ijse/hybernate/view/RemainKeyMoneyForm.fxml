@@ -13,11 +13,11 @@
 
 <AnchorPane prefHeight="491.0" prefWidth="797.0" style="-fx-background-color: #510a32;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ik.ijse.hybernate.controller.RemainKeyMoneyFormController">
    <children>
-      <TableView layoutY="185.0" prefHeight="306.0" prefWidth="797.0" stylesheets="@../css/fullpackstyling.css">
+      <TableView fx:id="tblRemainKeyMoney" layoutY="185.0" prefHeight="306.0" prefWidth="797.0" stylesheets="@../css/fullpackstyling.css">
         <columns>
-          <TableColumn prefWidth="267.0" text="Student ID" />
-          <TableColumn prefWidth="324.0" text="Student Name" />
-            <TableColumn prefWidth="202.0" text="Status" />
+          <TableColumn fx:id="colStudentId" prefWidth="267.0" text="Student ID" />
+          <TableColumn fx:id="colStudentName" prefWidth="324.0" text="Student Name" />
+            <TableColumn fx:id="colStatus" prefWidth="202.0" text="Status" />
         </columns>
          <styleClass>
             <String fx:value="table-view" />

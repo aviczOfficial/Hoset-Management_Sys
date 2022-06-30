@@ -15,35 +15,35 @@
 
 <AnchorPane prefHeight="491.0" prefWidth="797.0" style="-fx-background-color: #510a32;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ik.ijse.hybernate.controller.ManageStudentsFormController">
    <children>
-      <TableView layoutY="259.0" prefHeight="232.0" prefWidth="797.0" style="-fx-border-color: #ee4540;" stylesheets="@../css/fullpackstyling.css">
+      <TableView fx:id="tblStudent" layoutY="259.0" prefHeight="232.0" prefWidth="797.0" style="-fx-border-color: #ee4540;" stylesheets="@../css/fullpackstyling.css">
         <columns>
-          <TableColumn prefWidth="89.0" text="Student ID" />
-          <TableColumn prefWidth="134.0" text="Name" />
-            <TableColumn prefWidth="134.0" text="Address" />
-            <TableColumn prefWidth="111.0" text="Contact No" />
-            <TableColumn prefWidth="173.0" text="Date Of Birth" />
-            <TableColumn prefWidth="156.0" text="Gender" />
+          <TableColumn fx:id="colStudentId" prefWidth="89.0" text="Student ID" />
+          <TableColumn fx:id="colName" prefWidth="134.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="134.0" text="Address" />
+            <TableColumn fx:id="colConNo" prefWidth="111.0" text="Contact No" />
+            <TableColumn fx:id="colDOB" prefWidth="173.0" text="Date Of Birth" />
+            <TableColumn fx:id="colGender" prefWidth="156.0" text="Gender" />
         </columns>
          <styleClass>
             <String fx:value="table-view" />
             <String fx:value="table-row-cell" />
          </styleClass>
       </TableView>
-      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="142.0" prefHeight="19.0" prefWidth="248.0" promptText="Student Name" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
+      <JFXTextField fx:id="txtStudentName" focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="142.0" prefHeight="19.0" prefWidth="248.0" promptText="Student Name" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></JFXTextField>
-      <JFXButton buttonType="RAISED" layoutX="441.0" layoutY="210.0" prefHeight="20.0" prefWidth="86.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="Save">
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="441.0" layoutY="210.0" onAction="#btnSave" prefHeight="20.0" prefWidth="86.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="Save">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="541.0" layoutY="210.0" prefHeight="31.0" prefWidth="86.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="Delete">
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="541.0" layoutY="210.0" onAction="#btnDelete" prefHeight="31.0" prefWidth="86.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="Delete">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="271.0" layoutY="19.0" prefHeight="21.0" prefWidth="40.0" style="-fx-background-color: #2d142c;" text="+" textFill="WHITE">
+      <JFXButton fx:id="btnAddNewStudent" layoutX="271.0" layoutY="19.0" onAction="#btnAddNew" prefHeight="21.0" prefWidth="40.0" style="-fx-background-color: #2d142c;" text="+" textFill="WHITE">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
@@ -54,23 +54,23 @@
          </font>
       </Label>
       <Separator layoutX="64.0" layoutY="53.0" prefHeight="2.0" prefWidth="176.0" />
-      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="84.0" prefHeight="19.0" prefWidth="248.0" promptText="Student ID" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
+      <JFXTextField fx:id="txtStudentId" focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="84.0" prefHeight="19.0" prefWidth="248.0" promptText="Student ID" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="202.0" prefHeight="19.0" prefWidth="248.0" promptText="Student Address" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
+      <JFXTextField fx:id="txtAddress" focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="202.0" prefHeight="19.0" prefWidth="248.0" promptText="Student Address" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="411.0" layoutY="24.0" prefHeight="19.0" prefWidth="248.0" promptText="Contact No" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
+      <JFXTextField fx:id="txtConNo" focusColor="#ee4540" labelFloat="true" layoutX="411.0" layoutY="24.0" prefHeight="19.0" prefWidth="248.0" promptText="Contact No" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <JFXDatePicker defaultColor="#2d122c" layoutX="411.0" layoutY="83.0" prefHeight="33.0" prefWidth="248.0" promptText="Date Of Birth" style="-fx-background-color: white; -fx-border-color: #ee4540;" />
+      <JFXDatePicker fx:id="txtDOB" defaultColor="#2d122c" layoutX="411.0" layoutY="83.0" prefHeight="33.0" prefWidth="248.0" promptText="Date Of Birth" style="-fx-background-color: white; -fx-border-color: #ee4540;" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="33.0" layoutX="411.0" layoutY="142.0" stroke="WHITE" strokeType="INSIDE" width="248.0" />
-      <JFXComboBox focusColor="#ee4540" labelFloat="true" layoutX="411.0" layoutY="142.0" prefHeight="33.0" prefWidth="248.0" promptText="Gender" unFocusColor="WHITE" />
+      <JFXComboBox fx:id="cmbGender" focusColor="#ee4540" labelFloat="true" layoutX="411.0" layoutY="142.0" prefHeight="33.0" prefWidth="248.0" promptText="Gender" unFocusColor="WHITE" />
    </children>
 </AnchorPane>

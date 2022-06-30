@@ -13,42 +13,42 @@
 
 <AnchorPane prefHeight="491.0" prefWidth="797.0" style="-fx-background-color: #510a32;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ik.ijse.hybernate.controller.LoginDetailFormController">
    <children>
-      <TableView layoutX="385.0" prefHeight="491.0" prefWidth="412.0" stylesheets="@../css/fullpackstyling.css">
+      <TableView fx:id="tblLogInDetail" layoutX="385.0" prefHeight="491.0" prefWidth="412.0" stylesheets="@../css/fullpackstyling.css">
         <columns>
-          <TableColumn prefWidth="124.0" text="User ID" />
-          <TableColumn prefWidth="158.0" text="User Name" />
-            <TableColumn prefWidth="127.0" text="Password" />
+          <TableColumn fx:id="colUserID" prefWidth="124.0" text="User ID" />
+          <TableColumn fx:id="colUserName" prefWidth="158.0" text="User Name" />
+            <TableColumn fx:id="colPassword" prefWidth="127.0" text="Password" />
         </columns>
          <styleClass>
             <String fx:value="table-view" />
             <String fx:value="table-row-cell" />
          </styleClass>
       </TableView>
-      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="146.0" prefHeight="31.0" prefWidth="248.0" promptText="User ID" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
+      <JFXTextField fx:id="txtUserID" focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="146.0" prefHeight="31.0" prefWidth="248.0" promptText="User ID" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></JFXTextField>
-      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="226.0" prefHeight="31.0" prefWidth="248.0" promptText="User Name" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
+      <JFXTextField fx:id="txtUserName" focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="226.0" prefHeight="31.0" prefWidth="248.0" promptText="User Name" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" unFocusColor="#801336">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXTextField>
-      <JFXPasswordField focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="310.0" prefHeight="40.0" prefWidth="248.0" promptText="Password" style="-fx-background-color: white; -fx-border-color: #ee4540;" unFocusColor="#ed434000">
+      <JFXPasswordField fx:id="txtPassward" focusColor="#ee4540" labelFloat="true" layoutX="63.0" layoutY="310.0" prefHeight="40.0" prefWidth="248.0" promptText="Password" style="-fx-background-color: white; -fx-border-color: #ee4540;" unFocusColor="#ed434000">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXPasswordField>
-      <JFXButton buttonType="RAISED" layoutX="91.0" layoutY="400.0" prefHeight="31.0" prefWidth="86.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="Save">
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="91.0" layoutY="400.0" onAction="#btnSave" prefHeight="31.0" prefWidth="86.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="Save">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="196.0" layoutY="400.0" prefHeight="31.0" prefWidth="86.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="Delete">
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="196.0" layoutY="400.0" onAction="#btndelete" prefHeight="31.0" prefWidth="86.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="Delete">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="271.0" layoutY="33.0" prefHeight="21.0" prefWidth="40.0" style="-fx-background-color: #2d142c;" text="+" textFill="WHITE">
+      <JFXButton fx:id="btnAddNewUser" layoutX="271.0" layoutY="33.0" onAction="#btnAddNew" prefHeight="21.0" prefWidth="40.0" style="-fx-background-color: #2d142c;" text="+" textFill="WHITE">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
