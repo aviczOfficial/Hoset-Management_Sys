@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="682.0" prefWidth="1272.0" style="-fx-background-color: #510a32;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ik.ijse.hybernate.controller.ReservationFormController">
+<AnchorPane fx:id="PaneResevation" prefHeight="680.0" prefWidth="1264.0" style="-fx-background-color: #510a32;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ik.ijse.hybernate.controller.ReservationFormController">
    <children>
       <TableView layoutX="353.0" layoutY="131.0" prefHeight="528.0" prefWidth="894.0" stylesheets="@../css/fullpackstyling.css">
         <columns>
@@ -85,15 +85,21 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </JFXButton>
-      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="786.0" layoutY="58.0" prefHeight="33.0" prefWidth="223.0" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" text="Status" unFocusColor="#801336">
+      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="786.0" layoutY="58.0" prefHeight="33.0" prefWidth="153.0" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" text="Status" unFocusColor="#801336">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="1024.0" layoutY="58.0" prefHeight="33.0" prefWidth="223.0" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" text="QTY" unFocusColor="#801336">
+      <JFXTextField focusColor="#ee4540" labelFloat="true" layoutX="955.0" layoutY="58.0" prefHeight="33.0" prefWidth="153.0" style="-fx-background-color: white; -fx-border-color: #ee4540; -jfx-unfocus-color: #801336;" text="QTY" unFocusColor="#801336">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
+      <JFXButton layoutX="1199.0" layoutY="24.0" onAction="#btnBack" prefHeight="71.0" prefWidth="65.0" styleClass="buttonBack" stylesheets="@../css/fullpackstyling.css" text="." />
+      <ImageView fitHeight="57.0" fitWidth="54.0" layoutX="1205.0" layoutY="31.0" nodeOrientation="RIGHT_TO_LEFT">
+         <image>
+            <Image url="@../asserts/pngegg%20(6).png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
