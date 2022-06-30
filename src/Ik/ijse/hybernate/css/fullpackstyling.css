@@ -1,0 +1,216 @@
+.button1
+{
+-fx-background-color : black;
+-fx-background-radius :  30 30 30 30;
+}
+.button1:hover
+{
+-fx-background-color : #464646 ;
+-fx-background-radius :  30 30 30 30;
+}
+.button1:pressed
+{
+-fx-background-color : #f39c12 ;
+-fx-background-radius :  30 30 30 30;
+}
+
+.buttonBack
+{
+    -fx-background-color :linear-gradient(to top left, #ee4540, #c72c41);
+
+}
+.buttonBack:hover
+{
+    -fx-background-color :linear-gradient(to top left, #801336,#510a32 );
+
+}
+.buttonBack:pressed
+{
+    -fx-background-color :#2d142c;
+
+}
+
+.buttonMenu
+{
+
+}
+.buttonMenu:hover
+{
+    -fx-opacity : 0.60;
+    /*-fx-background-color : #95a5a6 ;*/
+
+
+}
+.buttonMenu:pressed
+{
+    -fx-background-color : #f39c12 ;
+}
+
+.buttonAdd
+{
+    -fx-background-color :#ee4045;
+    -fx-background-radius :  30 30 30 30;
+
+
+}
+.buttonAdd:hover
+{
+
+    /*-fx-background-color : #95a5a6 ;*/
+    -fx-background-color : white ;
+    -fx-text-fill: Black;
+
+}
+
+.button4
+{
+    -fx-background-color :linear-gradient(to top left, #ee4540, #c72c41);
+    -fx-background-radius :  30 30 30 30;
+}
+.button4:hover
+{
+    -fx-background-color :linear-gradient(to top left, #801336,#510a32 );
+    -fx-background-radius :  30 30 30 30;
+    -fx-text-fill: white;
+}
+.button4:pressed
+{
+    -fx-background-color :#2d142c;
+    -fx-background-radius :  30 30 30 30;
+}
+
+
+.button5
+{
+    -fx-background-color :#2d142c;
+    -fx-background-radius :  30 0 0 30;
+}
+.button5:hover
+{
+    -fx-background-color :#510a32;
+    -fx-background-radius :  30 0 0 30;
+}
+.button5:pressed
+{
+    -fx-background-color :#EE4540;
+    -fx-background-radius :  30 0 0 30;
+}
+
+
+
+.combo-box
+{
+    -fx-background-color : #141124;
+    -fx-border-color:  #515658;
+    -fx-border-radius: 30;
+}
+.combo-box:hover
+{
+    -fx-background-color : #141124;
+    -fx-border-color:  #FFFF;
+    -fx-border-radius: 30;
+}
+.combo-box:pressed
+{
+    -fx-background-color : #141124;
+    -fx-border-color:  #FFFF;
+    -fx-border-radius: 30;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size : 20;
+    -fx-background-color:   #2d142c
+;
+}
+.table-view .column-header .label{
+
+   -fx-text-fill: #ee4540;
+   -fx-font-weight: bold;
+   -fx-alignment: CENTER;
+}
+.table-view .cell{
+   -fx-cell-size: 30;
+  -fx-alignment: center-left;
+  -fx-text-fill: #000000;
+}
+
+.table-row-cell:selected {
+    -fx-background-color:  rgb(127, 172, 243);
+ }
+ .table-row-cell:selected .text {
+        -fx-fill : white ;
+
+ }
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+	-fx-background-radius: 2em;
+
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+	-fx-background-color: #c72c41;
+	-fx-border-color:derive(  #2d142c,80%);
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #2D75E8,90%);
+	-fx-background-insets: 2, 0, 0;
+	-fx-background-radius: 2em;
+
+}
+
+/* chart properties */
+
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-legend-visible: false;
+}
+.chart-plot-background {
+    -fx-background-color:transparent;
+}
+
+.chart-pie {
+    -fx-border-color: derive(-fx-pie-color, 1%);
+    -fx-border-width: 0px;
+}
+.linear-grad
+{
+    -fx-background-color: linear-gradient(to bottom left, #A868A0, #2D75E8);
+}
+
+.image-color{
+    -fx-image:#A868A0 ;
+}
+
+.btn{
+    -fx-background-color: #0147d4;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.textPane{
+    -fx-background-color: white;
+    -fx-border-color: rgba(76, 73, 73, 0.83);
+    -fx-border-radius: 8px;
+}
+.textField{
+    -fx-background-color: white;
+    -fx-prompt-text-fill: #510a32;
+}
+.textLabel{
+    -fx-background-color: white;
+    -fx-padding: 0 5px 0px 5px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(76, 73, 73, 0.83);;
+}

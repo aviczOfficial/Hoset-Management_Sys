@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ik.ijse.hybernate.controller.LoginFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d142c" height="594.0" stroke="TRANSPARENT" strokeType="INSIDE" width="454.0" />
+      <Label layoutX="161.0" layoutY="54.0" prefHeight="61.0" prefWidth="132.0" text="LOGIN">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c72c41" />
+                  <Stop color="#510a32" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="597.0" fitWidth="326.0" layoutX="269.0" layoutY="14.0" opacity="0.12">
+         <image>
+            <Image url="@../asserts/favpng_poster-download.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtUsrNm" layoutX="107.0" layoutY="331.0" prefHeight="36.0" prefWidth="243.0" promptText="User Name" />
+      <PasswordField fx:id="txtPwr" layoutX="107.0" layoutY="394.0" prefHeight="36.0" prefWidth="243.0" promptText="Password" />
+      <JFXButton buttonType="RAISED" layoutX="188.0" layoutY="478.0" onAction="#btnLogin" prefHeight="36.0" prefWidth="81.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="LOGIN" textFill="#2d142c">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Circle fill="#4f0a31" layoutX="229.0" layoutY="227.0" radius="66.0" stroke="#510a32" strokeType="INSIDE" strokeWidth="5.0" />
+      <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="175.0" layoutY="176.0">
+         <image>
+            <Image url="@../asserts/41330_user_purple_icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

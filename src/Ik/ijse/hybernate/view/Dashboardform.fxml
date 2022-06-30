@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="aPane" prefHeight="575.0" prefWidth="976.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ik.ijse.hybernate.controller.DashboardFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#510a32" height="577.0" layoutX="269.0" stroke="TRANSPARENT" strokeType="INSIDE" width="797.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d142c" height="577.0" stroke="TRANSPARENT" strokeType="INSIDE" width="270.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d142c" height="87.0" layoutX="48.0" stroke="TRANSPARENT" strokeType="INSIDE" width="929.0" />
+      <Label layoutX="33.0" layoutY="30.0" text="D24 HOSTEL">
+         <font>
+            <Font name="Aachen-Bold" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#510a32" />
+                  <Stop color="#ee4540" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="977.0" layoutY="-1.0" onAction="#btnBack" prefHeight="87.0" prefWidth="89.0" styleClass="buttonBack" stylesheets="@../css/fullpackstyling.css" text="." />
+      <ImageView fitHeight="56.0" fitWidth="58.0" layoutX="993.0" layoutY="15.0" nodeOrientation="RIGHT_TO_LEFT">
+         <image>
+            <Image url="@../asserts/pngegg%20(6).png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutY="129.0" onAction="#btnLoginDetails" prefHeight="65.0" prefWidth="270.0" styleClass="button5" stylesheets="@../css/fullpackstyling.css" text="LOGIN DETAILS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutY="211.0" onAction="#btnManageStudent" prefHeight="65.0" prefWidth="270.0" styleClass="button5" stylesheets="@../css/fullpackstyling.css" text="MANAGE STUDENT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutY="295.0" onAction="#btnManageRooms" prefHeight="65.0" prefWidth="270.0" styleClass="button5" stylesheets="@../css/fullpackstyling.css" text="MANAGE ROOMS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutY="381.0" onAction="#btnResevation" prefHeight="65.0" prefWidth="270.0" styleClass="button5" stylesheets="@../css/fullpackstyling.css" text="RESERVATION" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutY="466.0" onAction="#btnRemainKeyMoney" prefHeight="65.0" prefWidth="270.0" styleClass="button5" stylesheets="@../css/fullpackstyling.css" text="REMAIN KEY-MONEY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#510a32" height="41.0" layoutX="376.0" stroke="TRANSPARENT" strokeType="INSIDE" width="200.0" />
+      <Label layoutX="454.0" layoutY="11.0" text="DATE" textAlignment="CENTER" textFill="#ee4540">
+         <font>
+            <Font name="Aachen-Bold" size="15.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#510a32" height="41.0" layoutX="668.0" stroke="TRANSPARENT" strokeType="INSIDE" width="200.0" />
+      <ImageView fitHeight="491.0" fitWidth="797.0" layoutX="269.0" layoutY="85.0" opacity="0.13">
+         <image>
+            <Image url="@../asserts/pnghut_light-gradient-refraction-purple.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="747.0" layoutY="11.0" text="TIME" textAlignment="CENTER" textFill="#ee4540">
+         <font>
+            <Font name="Aachen-Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="491.0" fitWidth="320.0" layoutX="746.0" layoutY="84.0" nodeOrientation="INHERIT" opacity="0.27">
+         <image>
+            <Image url="@../asserts/favpng_poster-download.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="479.0" layoutY="247.0" prefHeight="161.0" prefWidth="377.0" text="WELCOME.">
+         <font>
+            <Font name="Aachen-Bold" size="65.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ee4540" />
+                  <Stop color="#801336" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Pane fx:id="paneDashboarad" layoutX="269.0" layoutY="86.0" prefHeight="491.0" prefWidth="797.0" />
+   </children>
+</AnchorPane>
