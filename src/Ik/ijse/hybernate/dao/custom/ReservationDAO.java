@@ -2,7 +2,7 @@ package Ik.ijse.hybernate.dao.custom;
 
 import Ik.ijse.hybernate.dao.CrudDAO;
 import Ik.ijse.hybernate.entity.Reservation;
-import Ik.ijse.hybernate.view.tdm.RemainKeyMnyTM;
+import Ik.ijse.hybernate.view.tdm.RemainKeyMoneyTM;
 import javafx.collections.ObservableList;
 
 import java.io.IOException;
@@ -13,5 +13,5 @@ public interface ReservationDAO extends CrudDAO<Reservation,String> {
 
     public ArrayList<Reservation> searchReservation(String enteredText) throws SQLException, ClassNotFoundException;
 
-    public ObservableList<RemainKeyMnyTM> getRemainKeyMoney() throws SQLException, ClassNotFoundException, IOException;
+    public ObservableList<RemainKeyMoneyTM> getRemainKeyMoney() throws SQLException, ClassNotFoundException, IOException;
 }

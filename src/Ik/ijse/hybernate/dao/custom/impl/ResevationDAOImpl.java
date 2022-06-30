@@ -3,7 +3,7 @@ package Ik.ijse.hybernate.dao.custom.impl;
 import Ik.ijse.hybernate.dao.custom.ReservationDAO;
 import Ik.ijse.hybernate.entity.Reservation;
 import Ik.ijse.hybernate.util.FactoryConfiguration;
-import Ik.ijse.hybernate.view.tdm.RemainKeyMnyTM;
+import Ik.ijse.hybernate.view.tdm.RemainKeyMoneyTM;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.hibernate.Session;
@@ -133,11 +133,11 @@ public class ResevationDAOImpl implements ReservationDAO {
     }
 
     @Override
-    public ObservableList<RemainKeyMnyTM> getRemainKeyMoney() throws IOException {
+    public ObservableList<RemainKeyMoneyTM> getRemainKeyMoney() throws IOException {
 
 
 
-        ObservableList<RemainKeyMnyTM> students = FXCollections.observableArrayList();
+        ObservableList<RemainKeyMoneyTM> students = FXCollections.observableArrayList();
 
         Session session = FactoryConfiguration.getInstance().getSession();
         List <Reservation>list = session.createQuery("FROM Reservation WHERE status = 'Paid Later'").list();
@@ -148,7 +148,7 @@ public class ResevationDAOImpl implements ReservationDAO {
             String status = reserve.getStatus();
 
 
-            students.add(new RemainKeyMnyTM(studentId,name,status));
+            students.add(new RemainKeyMoneyTM(studentId,name,status));
         }
         return students;
     }

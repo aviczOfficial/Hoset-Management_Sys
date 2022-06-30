@@ -1,6 +1,7 @@
 package Ik.ijse.hybernate.dao;
 
-public class DAOType {
+public enum DAOType {
+
 
     STUDENT,ROOM,RESERVATION,USER
 

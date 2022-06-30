@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RemainKeyMnyTM {
+public class RemainKeyMoneyTM {
     private String studentID;
     private String StudentName;
     private String status;
